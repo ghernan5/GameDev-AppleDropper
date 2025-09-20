@@ -28,15 +28,18 @@ public class treeScript : MonoBehaviour
         if (globalTimer >= 10f)
         {
             globalTimer = 0f;
-            if (dropChance < 0.9f)
+            if (dropChance < 0.6f)
             {
                 dropChance += 0.1f;
             }
-            if (dropInterval > 0.1)
+            if (dropInterval > 0.2)
             {
                 dropInterval -= 0.1f;
             }
-            speed += 5f;
+            if (speed < 20f)
+            {
+                speed += 5f;
+            }
         }
     }
 
